@@ -1,0 +1,22 @@
+<section>
+    <h2>Produtos</h2>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Título</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Preço</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of produtos">
+                <td>{{p.title}}</td>
+                <td>{{p.description}}</td>
+                <td>R$ {{p.price}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="produtos.length == 0">Nenhum produto foi cadastrado</p>
+</section>
